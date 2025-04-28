@@ -4,7 +4,7 @@ import os, qrcode, socket
 app = Flask(__name__)
 PORT = 5000
 folder_to_serve = input('enter a path: ')
-if not folder_to_serve: folder_to_serve = '/home/lappy/Downloads'
+if not folder_to_serve: folder_to_serve = os.path.join(os.path.expanduser('~'), 'Downloads')
 
 @app.route('/')
 def index():
